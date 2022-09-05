@@ -31,3 +31,5 @@ console.log(hiragana)
 
 const password = "myPassword123"
 console.log(password.length)
+
+
