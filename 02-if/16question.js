@@ -4,10 +4,10 @@
 - >= 60 year old and worked >= 25
 */
 
-var readline = require("readline-sync");
+let readline = require("readline-sync");
 
-var age = parseInt(readline.question("Age input: "));
-var work = parseFloat(readline.question("Working time: "));
+let age = parseInt(readline.question("Age input: "));
+let work = parseFloat(readline.question("Working time: "));
 
 if (age >= 65) {
     console.log(`You can retire.`);

@@ -1,18 +1,19 @@
 // Check if a date is valid. 
 
-var readline = require("readline-sync");
+let readline = require("readline-sync");
 
-var year = parseInt(readline.question("Year input: "));
-var month = parseInt(readline.question("Month input: "));
-var day = parseInt(readline.question("Day input: "));
-var fourHundred = year % 400;
-var four = year % 4;
-var oneHundred = year % 100; 
-var thirtyDays = month % 2;
+let year = parseInt(readline.question("Year input: "));
+let month = parseInt(readline.question("Month input: "));
+let day = parseInt(readline.question("Day input: "));
+let fourHundred = year % 400;
+let four = year % 4;
+let oneHundred = year % 100;
 
-if (month >= 1 && month <= 12) {
+if (month < 1 || month > 12) {
+    console.log(`${day}/${month}/${year} is not a valid date.`);
+} else {
     console.log(month);
-    if (thirtyDays == 0) {
+    if (month == 2 || month == 4 || month == 6 || month == 9 || month == 11) {
         console.log(thirtyDays);
         if (month == 2) {
             if ((fourHundred == 0) || ( four == 0 && oneHundred != 0)){
@@ -35,7 +36,7 @@ if (month >= 1 && month <= 12) {
                 }
             }
         } else {
-            if (day >= 1 && day <= 31) {
+            if (day >= 1 && day <= 30) {
                 console.log(`${day}/${month}/${year} is a valid date.`);
             } else {
                 console.log(`${day}/${month}/${year} is not a valid date.`);
@@ -43,12 +44,10 @@ if (month >= 1 && month <= 12) {
         }
     } else {
         console.log(thirtyDays);
-        if (day >= 1 && day <= 30) {
+        if (day >= 1 && day <= 31) {
             console.log(`${day}/${month}/${year} is a valid date.`);
         } else {
             console.log(`${day}/${month}/${year} is not a valid date.`);
         }
-    } 
-} else {
-    console.log(`${day}/${month}/${year} is not a valid date.`);
+    }
 }

@@ -5,17 +5,17 @@
 - If the delta is positive, the equation has two real roots; inform the user.
 */
 
-var readline = require("readline-sync");
+let readline = require("readline-sync");
 
-var a = parseInt(readline.question("A input: "));
+let a = parseInt(readline.question("A input: "));
 
 if (a == 0) {
     console.log("The equation is not of the second degree.");
 } else {
-    var b = parseInt(readline.question("B input: "));
-    var c = parseInt(readline.question("C input: "));
-    var delta = (Math.pow(b, 2)-(4*a*c));
-    var squareRoot = Math.sqrt(delta);   
+    let b = parseInt(readline.question("B input: "));
+    let c = parseInt(readline.question("C input: "));
+    let delta = (Math.pow(b, 2)-(4*a*c));
+    let squareRoot = Math.sqrt(delta);   
     if (delta < 0) {
         console.log("The equation has no real roots.");
     } else if (delta = 0 ) {
