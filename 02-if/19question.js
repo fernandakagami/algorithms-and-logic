@@ -3,6 +3,8 @@
 - If the calculated delta is negative, the equation has no real roots. Inform the user and close the program;
 - If the calculated delta is equal to zero, the equation has only one real root; inform it to the user;
 - If the delta is positive, the equation has two real roots; inform the user.
+* Example 1: x² – x –12 -> result: 4 and -3 
+* Example 1: 5x² -> result: 0
 */
 
 let readline = require("readline-sync");
@@ -14,13 +16,13 @@ if (a == 0) {
 } else {
     let b = parseInt(readline.question("B input: "));
     let c = parseInt(readline.question("C input: "));
-    let delta = (Math.pow(b, 2)-(4*a*c));
+    let delta = (b*b)-(4*a*c);
     let squareRoot = Math.sqrt(delta);   
     if (delta < 0) {
         console.log("The equation has no real roots.");
-    } else if (delta = 0 ) {
+    } else if (delta == 0) {
         root = ((-b) - squareRoot) / (2*a);
-        console.log(`The equation has 1 real roots. It is ${root}`);
+        console.log(`The equation has 1 real roots. It is ${root}.`);
     } else {
         root1 = ((-b) + squareRoot) / (2*a);
         root2 = ((-b) - squareRoot) / (2*a);            

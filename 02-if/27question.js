@@ -1,6 +1,6 @@
 /* Ask for one value between zero and five. Ask the user if they want the value in English or Portuguese. Print the number according to the user's choice.*/
 let readline = require("readline-sync");
-let value = parseInt(readline.question("Number input: "));
+let value = parseInt(readline.question("Number input(1-5): "));
 let language = readline.question("Language input(p or e): ");
 
 if (language == "p") {

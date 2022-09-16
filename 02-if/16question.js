@@ -9,11 +9,7 @@ let readline = require("readline-sync");
 let age = parseInt(readline.question("Age input: "));
 let work = parseFloat(readline.question("Working time: "));
 
-if (age >= 65) {
-    console.log(`You can retire.`);
-} else if (work >= 30) {
-    console.log(`You can retire.`);
-} else if (age >= 60 && work >= 25) {
+if (age >= 65 || work >= 30 || (age >= 60 && work >= 25)) {
     console.log(`You can retire.`);
 } else {
     console.log(`You cannot retire.`);
