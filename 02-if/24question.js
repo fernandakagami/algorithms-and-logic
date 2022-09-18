@@ -5,33 +5,32 @@
 
 let readline = require("readline-sync");
 let salary = parseFloat(readline.question("Salary input: "));
-let service = parseInt(readline.question("Number of work years: "));
-let raise = 0;
-let bonus = 0;
+let yearsOfService = parseInt(readline.question("Number of work years: "));
+let newSalary = salary;
+let bonus = 500;
 
 if (salary <= 500) {
-    raise = salary + salary*0.25;
+    newSalary = salary*1.25;
 } else if (salary <= 1000) {
-    raise = salary + salary*0.20;
+    newSalary = salary*1.20;
 } else if (salary <= 1500) {
-    raise = salary + salary*0.15;
+    newSalary = salary*1.15;
 } else if (salary <= 2000) {
-    raise = salary + salary*0.10;
-} else {
-    raise = "No raise";
+    newSalary = salary*1.10;
 }
 
-if (service < 1) {
-    bonus = " No bonus";
-} else if (service <= 3) {
+if (yearsOfService < 1) {
+    bonus = 0;
+} else if (yearsOfService <= 3) {
     bonus = 100;
-} else if (service <= 6){
+} else if (yearsOfService <= 6){
     bonus = 200;
-} else if (service <= 10 ) {
+} else if (yearsOfService <= 10 ) {
     bonus = 300;
-} else {
-    bonus = 500;
 }
 
-console.log(`Salary: ${raise+bonus}`);
-
+if (newSalary == salary && bonus == 0) {
+    console.log(`Employee doesn't have increase in the salary.`);        
+} else {
+    console.log(`Salary: ${bonus+salary}`);
+}

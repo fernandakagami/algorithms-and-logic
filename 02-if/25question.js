@@ -2,10 +2,10 @@
 */
 let readline = require("readline-sync");
 let order = "y";
-let product = parseInt(readline.question("Product code input: "));
-let quantity = parseInt(readline.question("Quantity input: "));
 
 while (order == "y") {
+    let product = parseInt(readline.question("Product code input: "));
+    let quantity = parseInt(readline.question("Quantity input: "));
     if (product == 100) {
         console.log(`Value order: ${1.2 * quantity}`);
     } else if (product == 101) {

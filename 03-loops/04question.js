@@ -4,7 +4,7 @@ let readline = require("readline-sync");
 
 let number = parseFloat(readline.question("Number input: "));
 
-while (number > 0 ) {
+while (number != 0) {
     console.log(`Wrong number ${number}`);
     number = parseFloat(readline.question("Number input: "));    
 }

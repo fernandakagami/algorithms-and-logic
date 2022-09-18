@@ -11,7 +11,7 @@ if (operation == "+") {
     calc = number1 - number2;
 } else if (operation == "*") {
     calc = number1 * number2;
-} else if (operation == "/") {
+} else if (operation == "/" && number2 != 0) {
     calc = number1 / number2;
 } else {
     calc = "Error";

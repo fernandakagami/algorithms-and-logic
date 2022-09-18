@@ -1,0 +1,1 @@
+/* Ask for 3 integers and store them in variables. Order the values of the variables in ascending order. It is not to print ordered, but to change the values of the variables. After sorting them, print them on the screen.*/
