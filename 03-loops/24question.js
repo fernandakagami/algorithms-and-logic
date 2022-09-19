@@ -1,10 +1,14 @@
 /* Asks for a positive integer and then prints N lines of the so-called Floyd's Triangle.*/
 let readline = require("readline-sync");
 let number = parseInt(readline.question("Number input: "));
-let floyd = 1;
+let numberLine = 0;
 
-for (let i = 0; i < number; i++) {
-    for (let u = 1; u <= floyd; u++) {
-            console.log(u)
-        }            
+
+for (let i = 1; i <= number; i++) {
+    let floyd = " ";
+    for (let u = 1; u <= i; u++) {
+        numberLine++;
+        floyd = floyd + ` ` + numberLine;        
+    }
+    console.log(floyd);    
 }
