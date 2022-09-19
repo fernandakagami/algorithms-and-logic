@@ -3,10 +3,10 @@ let readline = require("readline-sync");
 let a = parseInt(readline.question("Number 1 input: "));
 let b = parseInt(readline.question("Number 2 input: "));
 
-if (b > a) {
+if (b < a) {
     let temporaryNumber = a;
     a = b;
     b = temporaryNumber;
 }
 
-console.log(`${a} is greater than ${b}`);
+console.log(`${a} is smaller than ${b}`);
