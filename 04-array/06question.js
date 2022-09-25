@@ -8,61 +8,13 @@ for (let i = 0; i < 5; i++) {
     salary[i] = 2000 + yearOfWork * 300;
 }
 
-
-if (salary[0] < salary[1]) {
-    temporaryElement = salary[0];
-    salary[0] = salary[1];
-    salary[1] = temporaryElement;
-} 
-if (salary[1] < salary[2]) {
-    temporaryElement = salary[1];
-    salary[1] = salary[2];
-    salary[2] = temporaryElement;
+for(let u = 0; u < 5; u++) {
+    for (let i = 0; i < 5; i++) {
+        if (salary[i] < salary[i+1]) {
+            temporaryElement = salary[i];
+            salary[i] = salary[i+1];
+            salary[i+1] = temporaryElement;
+        }         
+    }
 }
-if (salary[2] < salary[3]) {
-    temporaryElement = salary[2];
-    salary[2] = salary[3];
-    salary[3] = temporaryElement;
-}
-if (salary[3] < salary[4]) {
-    temporaryElement = salary[3];
-    salary[3] = salary[4];
-    salary[4] = temporaryElement;                                 
-}
-
-if (salary[0] < salary[1]) {
-    temporaryElement = salary[0];
-    salary[0] = salary[1];
-    salary[1] = temporaryElement;
-} 
-if (salary[1] < salary[2]) {
-    temporaryElement = salary[1];
-    salary[1] = salary[2];
-    salary[2] = temporaryElement;
-}
-if (salary[2] < salary[3]) {
-    temporaryElement = salary[2];
-    salary[2] = salary[3];
-    salary[3] = temporaryElement;
-}
-
-
-if (salary[0] < salary[1]) {
-    temporaryElement = salary[0];
-    salary[0] = salary[1];
-    salary[1] = temporaryElement;
-} 
-if (salary[1] < salary[2]) {
-    temporaryElement = salary[1];
-    salary[1] = salary[2];
-    salary[2] = temporaryElement;
-}
-
-if (salary[0] < salary[1]) {
-    temporaryElement = salary[0];
-    salary[0] = salary[1];
-    salary[1] = temporaryElement;
-} 
-
 console.log(salary);
-
