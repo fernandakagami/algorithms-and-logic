@@ -29,7 +29,7 @@ class Person {
     }
 }
 
-const jose = new Person('Jose', 70, 1.75);
+const jose = new Person('Jose', 100, 1.75);
 console.log(jose.calculateImc());
 console.log(jose.rateImc())
 const fernanda = new Person('Fernanda', 64, 1.64);
