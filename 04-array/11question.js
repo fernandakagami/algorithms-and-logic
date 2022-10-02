@@ -6,7 +6,7 @@ let flavors = [0, 0, 0, 0];
 
 while (code != 99) {
     if (code === 1) {
-        flavors[0] += 1; 
+        flavors[0]++; 
         code = parseInt(readline.question('Flavor input: '));
     } else if (code === 2) {
         flavors[1]++;
