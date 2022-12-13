@@ -5,15 +5,18 @@ require_once 'Tribute.php';
 
 abstract class Tax implements Tribute 
 {
-    public function __construct($porcentage, $value)
+    public $percentage;
+    public $value;
+
+    public function __construct($percentage, $value)
     {
-        $this->porcentage = $porcentage;
+        $this->percentage = $percentage;
         $this->value = $value;
     }
 
-    public function getPorcentage()
+    public function getPercentage()
     {
-        return $this->porcentage;
+        return $this->percentage;
     }
 
     public function getValue()
@@ -21,9 +24,9 @@ abstract class Tax implements Tribute
         return $this->value;
     }
 
-    public function setPorcentage()
+    public function setPercentage()
     {
-        $this->porcentage = $porcentage;
+        $this->percentage = $percentage;
     }
 
     public function setValue()
@@ -31,6 +34,6 @@ abstract class Tax implements Tribute
         $this->value = $value;
     }
 
-    abstract public function calculate($porcentage, $value);
+    abstract public function calculate($percentage, $value);
 }
 ?>

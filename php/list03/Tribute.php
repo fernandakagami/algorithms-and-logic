@@ -4,5 +4,5 @@ namespace Application\Model;
 interface Tribute
 {
     public function getValue();
-    public function getPorcentage();
+    public function getPercentage();
 }

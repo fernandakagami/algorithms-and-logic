@@ -5,14 +5,14 @@ require_once 'Tax.php';
 
 class Iss extends Tax
 {
-    public function __construct($porcentage, $value)
+    public function __construct($percentage, $value)
     {
-        parent::__construct($porcentage, $value);
+        parent::__construct($percentage, $value);
     }
 
-    public function calculate($porcentage, $value)
+    public function calculate($percentage, $value)
     {
-        echo $value - ($value*$porcentage);
+        echo $value - ($value*$percentage);
     }
 }
 ?>
